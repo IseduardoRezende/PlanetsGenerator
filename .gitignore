@@ -13,3 +13,9 @@ PlanetsGenerator/obj/Debug/net8.0/PlanetsGenerator.sourcelink.json
 /.vs/PlanetsGenerator/v17
 /.vs/PlanetsGenerator
 /.vs
+*.v2
+/.vs/PlanetsGenerator/v17
+/.vs/PlanetsGenerator
+/.vs
+*.bin
+*.bin
