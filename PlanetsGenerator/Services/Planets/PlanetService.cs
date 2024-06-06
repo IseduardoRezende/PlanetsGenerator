@@ -13,7 +13,7 @@ namespace PlanetsGenerator.Services.Planets
 
         public void GenerateNewPlanet()
         {
-            PlanetDesigner.Draw(color: _planet.MainColor);
+            PlanetDesigner.Draw(planetColor: _planet.MainColor);
             Console.WriteLine(_planet);
         }
     }

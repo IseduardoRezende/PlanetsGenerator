@@ -1,0 +1,11 @@
+
+*.v2
+*.vsidx
+.vs/PlanetsGenerator/v17/DocumentLayout.json
+*.bin
+*.dll
+*.exe
+*.pdb
+*.cache
+*.txt
+PlanetsGenerator/obj/Debug/net8.0/PlanetsGenerator.sourcelink.json

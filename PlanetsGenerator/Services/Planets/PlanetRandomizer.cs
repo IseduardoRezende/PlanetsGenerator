@@ -37,10 +37,10 @@ namespace PlanetsGenerator.Services.Planets
                    .BuildClassification(GetRandomItem(Enum.GetValues<Classification>()))
                    .BuildAvgTemperature(_random.Next(MinTemperature, MaxTemperature + 1))
                    .BuildAtmosphericPressure(_random.Next(MinAtmosphericPressure, MaxAtmosphericPressure + 1))
-                   .BuildInhabitant(new InhabitantBuilder()
-                                    .BuildName(GetRandomItem(_inhabitantsNames))
+                   .BuildInhabitant(new RationalInhabitantBuilder()
                                     .BuildSocietiesStatus(GetRandomItems(Enum.GetValues<SocietyStatus>()))
                                     .BuildCharacteristics(GetRandomItems(Enum.GetValues<Characteristic>()))
+                                    .BuildName(GetRandomItem(_inhabitantsNames))
                                     .GetInhabitant())
                    .GetPlanet();
         }

@@ -7,8 +7,6 @@ namespace PlanetsGenerator.Interfaces
     {
         IInhabitantBuilder BuildName(string name);
 
-        IInhabitantBuilder BuildSocietiesStatus(params SocietyStatus[] societiesStatus);
-
         IInhabitantBuilder BuildCharacteristics(params Characteristic[] characteristics);
 
         Inhabitant GetInhabitant();

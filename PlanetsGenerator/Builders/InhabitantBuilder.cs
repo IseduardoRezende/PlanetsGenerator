@@ -6,7 +6,7 @@ namespace PlanetsGenerator.Builders
 {
     public class InhabitantBuilder : IInhabitantBuilder
     {
-        private readonly Inhabitant _inhabitant = new();        
+        protected readonly Inhabitant _inhabitant = new();        
 
         public IInhabitantBuilder BuildCharacteristics(params Characteristic[] characteristics)
         {
@@ -18,15 +18,9 @@ namespace PlanetsGenerator.Builders
         {
             _inhabitant.Name = name;
             return this;
-        }
+        }        
 
-        public IInhabitantBuilder BuildSocietiesStatus(params SocietyStatus[] societiesStatus)
-        {
-            _inhabitant.SocietiesStatus = societiesStatus;
-            return this;
-        }
-
-        public Inhabitant GetInhabitant()
+        public virtual Inhabitant GetInhabitant()
         {
             return _inhabitant;
         }

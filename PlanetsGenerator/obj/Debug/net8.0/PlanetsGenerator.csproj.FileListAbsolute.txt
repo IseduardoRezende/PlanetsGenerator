@@ -12,3 +12,4 @@ C:\Users\Fabiola\Desktop\CSharp\PlanetsGenerator\PlanetsGenerator\obj\Debug\net8
 C:\Users\Fabiola\Desktop\CSharp\PlanetsGenerator\PlanetsGenerator\obj\Debug\net8.0\PlanetsGenerator.pdb
 C:\Users\Fabiola\Desktop\CSharp\PlanetsGenerator\PlanetsGenerator\obj\Debug\net8.0\PlanetsGenerator.genruntimeconfig.cache
 C:\Users\Fabiola\Desktop\CSharp\PlanetsGenerator\PlanetsGenerator\obj\Debug\net8.0\ref\PlanetsGenerator.dll
+C:\Users\Fabiola\Desktop\CSharp\PlanetsGenerator\PlanetsGenerator\obj\Debug\net8.0\PlanetsGenerator.sourcelink.json

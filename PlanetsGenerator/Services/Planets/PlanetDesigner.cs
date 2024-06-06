@@ -2,19 +2,19 @@
 {
     public class PlanetDesigner
     {
-        private static readonly int _radius = 13;
+        private const int Radius = 13;
 
-        public static void Draw(ConsoleColor color)
+        public static void Draw(ConsoleColor planetColor)
         {
-            SetConsoleBackgroudColor(color);
+            SetConsoleBackgroudColor(planetColor);
 
-            Console.ForegroundColor = color;
+            Console.ForegroundColor = planetColor;
 
-            for (int y = -_radius; y <= _radius; y++)
+            for (int y = -Radius; y <= Radius; y++)
             {
-                for (int x = -_radius; x <= _radius; x++)
+                for (int x = -Radius; x <= Radius; x++)
                 {
-                    if ((x * x) + (y * y) < _radius * _radius)
+                    if (Math.Pow(x, 2) + Math.Pow(y, 2) < Math.Pow(Radius, 2))
                     {
                         Console.Write(" ");
                         Console.Write("*");
@@ -30,9 +30,9 @@
             Console.ResetColor();
         }
 
-        private static void SetConsoleBackgroudColor(ConsoleColor consoleColor)
+        private static void SetConsoleBackgroudColor(ConsoleColor planetColor)
         {
-            if (consoleColor is not ConsoleColor.Black)
+            if (planetColor is not ConsoleColor.Black)
                 return;
 
             Console.BackgroundColor = ConsoleColor.White;

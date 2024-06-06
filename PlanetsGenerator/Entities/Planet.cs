@@ -5,15 +5,15 @@ namespace PlanetsGenerator.Entities
 {
     public class Planet
     {
-        private const int MaxLivableTemperature = 50;
+        private const double MaxLivableTemperature = 50.0;
 
-        private const int MinLivableTemperature = -50;
+        private const double MinLivableTemperature = -50.0;
 
         private const double MaxLivableAtmosphericPressure = 2.0;
 
         private const double MinLivableAtmosphericPressure = 0.2;
 
-        private const double SuccessSurvivalRate = 0.90;
+        private const double FailureSurvivalRate = 0.60;
 
         private readonly double _chanceToLive = Random.Shared.NextDouble();
 
@@ -56,17 +56,19 @@ namespace PlanetsGenerator.Entities
 
         private WeatherStatusForHumans GetWeatherStatusForHumans()
         {
-            return AvgTemperature.IsBetween(MinLivableTemperature, MaxLivableTemperature) ? WeatherStatusForHumans.Great : WeatherStatusForHumans.Terrible;
+            return AvgTemperature.IsBetween(MinLivableTemperature, MaxLivableTemperature) 
+                ? WeatherStatusForHumans.Great 
+                : WeatherStatusForHumans.Terrible;
         }
 
         private bool IsHabitable()
         {
-            return _chanceToLive >= SuccessSurvivalRate && Classification is Classification.Rocky;
+            return _chanceToLive >= FailureSurvivalRate && Classification is Classification.Rocky;
         }
 
         private bool IsHabitableForHumans()
         {
-            return IsHabitable() &&
+            return Classification is Classification.Rocky &&
                    AvgTemperature.IsBetween(MinLivableTemperature, MaxLivableTemperature) &&
                    AtmosphericPressure.IsBetween(MinLivableAtmosphericPressure, MaxLivableAtmosphericPressure);
         }
