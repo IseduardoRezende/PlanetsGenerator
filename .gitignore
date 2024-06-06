@@ -9,3 +9,7 @@
 *.cache
 *.txt
 PlanetsGenerator/obj/Debug/net8.0/PlanetsGenerator.sourcelink.json
+*.json
+/.vs/PlanetsGenerator/v17
+/.vs/PlanetsGenerator
+/.vs
